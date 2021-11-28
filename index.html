@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>\
+    <h1 style="text-align: center;">TO SEE THE ANSWER OF THIS ASSIGNMENT OPEN CONSOLE</h1>
+    
+<script>
+
+var todolist=["make a cofee" , "learning java" , "complete assignment","taking doubt sessuion" , "attanding class"];
+
+// FUNCTION OR ADDING ITEM
+function addingItem(newItem) 
+{
+    todolist.push(newItem)
+    
+}
+
+//FUNCTION FOR MARK ANY ITEM
+function markItem(mark) {
+    for(let i=0;i<=todolist.length-1;i++){
+        if(mark===i){
+            todolist[i]=todolist[i].concat("✔");
+        }
+    }
+
+
+}
+
+//FUNCTION FOR EDITING THE ITEM
+function editItem(i,edit){
+    todolist[i]=edit;
+}
+
+
+
+// FUNCTION FOR DELETING ANY ITEM ON THE BASIS OF USER INPUT
+function deleteItem(index)
+{
+    let deleted=todolist.splice(index,1)[0];
+
+
+    console.log("THE DELETED ITEM");
+    console.log("ARRAY AFTER DELETING THE ITEM"+todolist)
+
+}
+
+//SHOWING ALL THE ITEMS FROM TODOLIST
+function show(){
+    for(let i=0;i<=todolist.length-1;i++){
+        console.log(todolist[i]);
+    }
+}
+
+
+
+//ADDING NEW ITEM IN TODOLIST
+addingItem("GIVE THE TEST ON SUNDAY");
+addingItem("message sir when test score is showing error 🤣");
+
+//DISPLAYING ALL ITEMS OF TO DO LIST
+show();
+
+console.log("============================1ST FUNCTION COMPLETE===================================");
+
+
+
+//DELETING THE FIRST ELEMENT FROM THE TODOLIST
+deleteItem(0);
+////DISPLAYING ALL ITEMS OF TO DO LIST AFTER DELETING
+show();
+console.log("============================ 2ND FUNCTION COMPLETE===================================");
+
+
+
+
+//MARKING THE DONE ITEM 
+markItem(1);
+markItem(4);
+//SHOWING THE LIST AFTER MARKING THE ITEMS
+show();
+console.log("============================3RD FUNCTION COMPLETE===================================");
+
+
+
+
+//EDITING INTO THE TODOLIST
+editItem(3,"ADDING THIS EMOJI😎😍🙄");
+//SHOWING ITEM AFTER EDITING
+show();
+console.log("============================4TH FUNCTION COMPLETE===================================");
+
+</script>
+
+
+
+
+</body>
+</html>
